@@ -1,37 +1,30 @@
+import { features } from "../constants";
 
- import { features } from "../constants";
- const FeatureSection = () => {
+const FeatureSection = () => {
   return (
-    <div className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
-        <div className="text-center">
-            <span className="bg-neutral-900 text-orange-500 rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
-                Feature
-            </span>
-            <h2 className="text-3xl sm:text-5xl lg:text-6l mt-10 lg:mt-20 tracking-wide">
-                Easily Build
-            <span className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text">
-                {" "}Your Code</span>
-                </h2>
-            </div>
-            <div className="flex flex-wrap mt-10 lg:mt-20">
-                {features.map((feature, index) => (
-                <div key = {index} className="w-full sm:1/2 lg:w-1/3">
-                    <div className="flex">
-                        <div className="flex mx-6 h-10 w-10 p-2 bg-neutral-900 text-orange-700
-                        justify-center items-center rounded-full">
-                            {feature.icon}
-                        </div>
-                        <div>
-                            <h5 className="mt-1 mb-6 text-xl">{feature.text}</h5>
-                            <p className="text-md p-2 mb-20 text-neutral-500">
-                                {feature.description}
-                            </p>
-                        </div>
-                        </div>
-                        </div>
-                ))}
-            </div>
+    <div className="mt-32 pb-20 border-b border-neutral-800">
+        <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold">
+                Easily Build Your Code
+            </h2>
+            <p className="mt-4 text-neutral-400 max-w-2xl mx-auto">
+              Everything you need to build and deploy your applications
+            </p>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+                <div key={index} className="p-6 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
+                    <div className="w-12 h-12 rounded-lg bg-neutral-900 flex items-center justify-center text-neutral-300 mb-4">
+                        {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{feature.text}</h3>
+                    <p className="text-neutral-400 leading-relaxed">
+                        {feature.description}
+                    </p>
+                </div>
+            ))}
+        </div>
+    </div>
   );
 };
 

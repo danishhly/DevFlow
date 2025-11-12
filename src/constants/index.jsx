@@ -43,7 +43,7 @@ export const testimonials = [
     user: "Josh kurish",
     company: "Fusion Dynamics, chennai",
     image: user4,
-    text: "Working with the team at VirtaulEx Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    text: "Working with the team at DevFlow was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
   },
   {
     user: "Shakkir v",
